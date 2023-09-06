@@ -2,13 +2,15 @@ const bar = document.getElementById('barChart');
 const pie = document.getElementById('pieChart');
 const line = document.getElementById('lineChart');
 
+let coisas = ["Segurança", "Luz", "Internet", "Água Publica", "Esgoto"]
+let valoresCoisas = [10, 20, 15, 30, 50]
 new Chart(bar, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: coisas,
         datasets: [{
         label: 'Quantidade de escolas que possuem:',
-        data: [12, 19, 3, 5, 2, 40],
+        data: valoresCoisas,
         borderWidth: 5
         }]
     },
@@ -28,13 +30,15 @@ new Chart(bar, {
     }
 });
 
+let profissionalismo = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sul', 'Suldeste'] 
+let valoresProf = [12, 19, 3, 5, 2]
 new Chart(pie, {
     type: 'doughnut',
     data: {
-        labels: ['Norte', 'Nordeste', 'Centro-Oeste', 'Sul', 'Suldeste'],
+        labels: profissionalismo,
         datasets: [{
         label: 'Quantidade de escolas por região:',
-        data: [12, 19, 3, 5, 2],
+        data: valoresProf,
         borderWidth: 5
         }]
     },
